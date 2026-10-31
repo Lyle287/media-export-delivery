@@ -1,0 +1,26 @@
+{
+  "name": "media-export-delivery",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "tsx src/setup_export_bucket.ts",
+    "dev": "tsx watch src/media_export_service.ts",
+    "start": "tsx src/media_export_service.ts",
+    "example": "tsx scripts/request_creator_export.ts",
+    "test": "node --import tsx --test test/export_manifest.test.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm test"
+  },
+  "dependencies": {
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
